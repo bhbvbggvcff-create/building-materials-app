@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة المحجر الذكية - توريد ونقل ثقيل</title>
+    <!-- 🔗 ربط ملف التنسيق الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>🏗️ لـوحـة تـوريدات مـحجـر الـرمـل والـزلـط</h1>
+        <p>نظام إلكتروني ذكي لحساب التكلفة وحجز خطوط النقل الثقيل فوريًا</p>
+    </header>
+
+    <div class="main-grid">
+        
+        <div class="section-card">
+            <h3>📊 حاسبة الحمولات والتوريد</h3>
+            
+            <label>اختر صنف الخامة من المحجر:</label>
+            <select id="material">
+                <option value="150">رمل ناعم ممتاز (150 جنيه / متر)</option>
+                <option value="180">رمل خشن خرسانات (180 جنيه / متر)</option>
+                <option value="250">زلط فينو فاخر (250 جنيه / متر)</option>
+                <option value="220">سن سنفور ومقاسات (220 جنيه / متر)</option>
+            </select>
+
+            <label>الكمية المطلوبة (متر مكعب):</label>
+            <input type="number" id="quantity" value="10" min="1">
+
+            <label>مسار وتكلفة سيارة النقل الكبيرة:</label>
+            <select id="distance">
+                <option value="300">عربة قلاب صغيرة (داخل المدينة) + 300 جنيه</option>
+                <option value="800">عربة نقل 36 متر (أطراف المدينة) + 800 جنيه</option>
+                <option value="1500">تريلا نقل ثقيل (محافظات مسافة بعيدة) + 1500 جنيه</option>
+            </select>
+
+            <button class="btn-calc" onclick="calculateTotal()">حساب الفاتورة الإجمالية</button>
+            <a id="whatsappLink" href="#" target="_blank" class="btn-whatsapp" onclick="sendToWhatsApp(event)">💬 حجز الشحنة وتوريد عبر الواتساب</a>
+
+
+            <div class="result" id="totalPrice">الإجمالي: 0 جنيه مصري</div>
+        </div>
+
+        <div class="section-card">
+            <h3>🚛 خطوط السيارات الكبيرة ومواد المحجر</h3>
+            
+            <div class="gallery-item">
+                <img src="صور/تنزيل.jpg" alt="تريلا نقل ثقيل">
+                <div class="gallery-info">
+                    <h4>عربات تريلا قلاب (حمولات كبرى)</h4>
+                    <p>أسطول نقل جاهز للشحن السريع حمولة حتى 35-40 متر مكعب للمشاوير البعيدة.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="صور/تنزيل (1).jpg" alt="لودر محجر">
+                <div class="gallery-info">
+                    <h4>شحن وتجهيز فوري باللودر</h4>
+                    <p>تعبئة سريعة ومباشرة من ساحة المحجر لضمان خروج الحمولات في موعدها.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="صور/تنزيل (2).jpg" alt="رمل وزلط">
+                <div class="gallery-info">
+                    <h4>رمل وهزّاز زلط معتمد</h4>
+                    <p>يتوفر لدينا رمل محارة ناعم، رمل خشن خرسانة خشن، وزلط بمقاسات هندسية دقيقة.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- 🔗 ربط ملف العمليات البرمجية الـ JavaScript الخارجي -->
+    <script src="script.js"></script>
+</body>
+</html>
+
